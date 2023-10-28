@@ -5,5 +5,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte'
 export default defineConfig({
   plugins: [svelte({
     /** Plugin options go here. */
-  })]
+  })],
+  base: '/DeerIsleExplorers1Prices/'
 })
