@@ -6,7 +6,7 @@
     let price: number | null = null;
     let quantity = "1";
 
-    // Update the 'item' variable whenever 'search' changes
+    // Updating the 'search' variable whenever 'item' changes
     $: search = item;
 
     function submit() {
