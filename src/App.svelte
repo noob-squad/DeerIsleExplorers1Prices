@@ -44,12 +44,12 @@
 <div class="flex flex-col items-center h-full w-full p-8 bg-gray-100">
   <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
     <InputFields {addItem} bind:search />
-    <ItemList {items} {search} />
     <button
       on:click={dumpItems}
       class="mt-4 w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
     >
       Dump
     </button>
+    <ItemList {items} {search} />
   </div>
 </div>
