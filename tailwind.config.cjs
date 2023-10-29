@@ -14,6 +14,11 @@ module.exports = {
         '8ba0a4': '#8ba0a4',
         'eaeaea': '#eaeaea',
       },
+      screens: {
+        '3xl': '1920px',
+        '4xl': '2560px',
+        '5xl': '3840px'
+      },
     },
   },
   plugins: [],
