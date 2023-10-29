@@ -41,12 +41,12 @@
 
 <TailwindCss />
 
-<div class="flex flex-col items-center h-full w-full p-8 bg-gray-100">
-  <div class="w-full max-w-md bg-white p-6 rounded-lg shadow-md">
+<div class="flex flex-col items-center h-full min-h-screen p-8 bg-183e4b">
+  <div class="w-full max-w-2xl bg-eaeaea p-6 rounded-lg shadow-md">
     <InputFields {addItem} bind:search />
     <button
       on:click={dumpItems}
-      class="mt-4 w-full bg-green-500 text-white p-2 rounded hover:bg-green-600"
+      class="mb-4 w-full bg-d74a49 text-white p-2 rounded hover:bg-d74a49"
     >
       Dump
     </button>

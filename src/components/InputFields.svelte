@@ -21,22 +21,22 @@
         type="text"
         placeholder="Item"
         bind:value={item}
-        class="p-2 border rounded"
+        class="p-2 border rounded border-8ba0a4"
     />
     <input
         type="number"
         placeholder="Price"
         bind:value={price}
-        class="p-2 border rounded"
+        class="p-2 border rounded border-8ba0a4"
     />
-    <select bind:value={quantity} class="p-2 border rounded">
+    <select bind:value={quantity} class="p-2 border rounded border-8ba0a4">
         <option value="1">1</option>
         <option value="10">10</option>
     </select>
     <button
         on:click={submit}
-        class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+        class="bg-1b4552 text-white p-2 rounded hover:bg-183e4b"
     >
-        +
+        Add Item
     </button>
 </div>
