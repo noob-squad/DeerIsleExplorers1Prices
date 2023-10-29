@@ -13,9 +13,10 @@
     );
     const text = await response.text();
     const lines = text.split("\n").slice(1);
+    console.log(lines);
     items = lines.map((line) => {
-      const [name, price, quantity] = line.split(",");
-      return { name, price, quantity };
+      const [name, sellPrice, quantity, buyPrice] = line.split(",");
+      return { name, sellPrice, quantity, buyPrice };
     });
   }
 
@@ -28,7 +29,10 @@
 
   function dumpItems() {
     const data = newItems
-      .map((item) => `${item.name}\t${item.price}\t${item.quantity}`)
+      .map(
+        (item) =>
+          `${item.name}\t${item.sellPrice}\t${item.quantity}\t${item.buyPrice}`
+      )
       .join("\n");
     navigator.clipboard.writeText(data).then(
       () => alert("Data copied to clipboard!"),
@@ -42,7 +46,7 @@
 <TailwindCss />
 
 <div class="flex flex-col items-center h-full min-h-screen p-8 bg-183e4b">
-  <div class="w-full max-w-2xl bg-eaeaea p-6 rounded-lg shadow-md">
+  <div class="w-full bg-eaeaea p-6 rounded-lg shadow-md">
     <InputFields {addItem} bind:search />
     <button
       on:click={dumpItems}

@@ -3,16 +3,18 @@
     export let search: string;
 
     let item = "";
-    let price: number | null = null;
+    let sellPrice: number | null = null;
+    let buyPrice: number | null = null;
     let quantity = "1";
 
     // Updating the search variable whenever 'item' changes
     $: search = item;
 
     function submit() {
-        addItem({ name: item, price, quantity });
+        addItem({ name: item, sellPrice, quantity, buyPrice });
         item = "";
-        price = null;
+        sellPrice = null;
+        buyPrice = null;
     }
 </script>
 
@@ -25,8 +27,14 @@
     />
     <input
         type="number"
-        placeholder="Price"
-        bind:value={price}
+        placeholder="Sell Price"
+        bind:value={sellPrice}
+        class="p-2 border rounded border-8ba0a4"
+    />
+    <input
+        type="number"
+        placeholder="Buy Price"
+        bind:value={buyPrice}
         class="p-2 border rounded border-8ba0a4"
     />
     <select bind:value={quantity} class="p-2 border rounded border-8ba0a4">
